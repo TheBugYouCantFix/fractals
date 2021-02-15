@@ -3,27 +3,27 @@
 import turtle
 from fractals.setup import setup
 
-step = 500
 
-
-def draw_triangle():
+def draw_triangle(step):
     for _ in range(3):
         turtle.forward(1)
         turtle.forward(step)
         turtle.left(120)
 
 
-def draw_fractal_triangle():
-    global step
-    draw_triangle()
+def draw_fractal_triangle(step):
+    draw_triangle(step)
     step /= 2
     turtle.forward(step)
     turtle.left(60)
+    return step
 
 
 def main():
-    for _ in range(10):
-        draw_fractal_triangle()
+    the_step = 500
+
+    while the_step > 1:
+        the_step = draw_fractal_triangle(the_step)
 
 
 if __name__ == '__main__':
