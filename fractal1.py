@@ -1,3 +1,4 @@
+# Fractal square
 
 import turtle
 import math
@@ -6,15 +7,15 @@ from fractals.setup import setup
 step = 500
 
 
-def draw_rect():
+def draw_square():
     for _ in range(4):
         turtle.forward(step)
         turtle.right(90)
 
 
-def draw_rect_fractal():
+def draw_fractal_square():
     global step
-    draw_rect()
+    draw_square()
     step /= 2
     turtle.forward(step)
     turtle.right(45)
@@ -23,7 +24,7 @@ def draw_rect_fractal():
 
 def main():
     for _ in range(15):
-        draw_rect_fractal()
+        draw_fractal_square()
 
 
 if __name__ == '__main__':
