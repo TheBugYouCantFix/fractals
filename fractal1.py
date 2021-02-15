@@ -1,11 +1,7 @@
+
 import turtle
 import math
 from fractals.setup import setup
-
-# Going to the start point
-turtle.penup()
-turtle.goto(-300, 300)
-turtle.pendown()
 
 step = 500
 
@@ -23,7 +19,6 @@ def draw_rect_fractal():
     turtle.forward(step)
     turtle.right(45)
     step = math.sqrt(2 * (step ** 2))  # Pythagorean theorem
-
 
 
 def main():
