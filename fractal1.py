@@ -16,19 +16,19 @@ def draw_rect():
         turtle.right(90)
 
 
-def draw_rect_inside():
+def draw_rect_fractal():
     global step
+    draw_rect()
     step /= 2
     turtle.forward(step)
     turtle.right(45)
     step = math.sqrt(2 * (step ** 2))  # Pythagorean theorem
-    draw_rect()
+
 
 
 def main():
     for _ in range(15):
-        draw_rect()
-        draw_rect_inside()
+        draw_rect_fractal()
 
 
 if __name__ == '__main__':
