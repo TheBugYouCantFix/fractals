@@ -4,27 +4,27 @@ import turtle
 import math
 from fractals.setup import setup
 
-step = 500
 
-
-def draw_square():
+def draw_square(step):
     for _ in range(4):
         turtle.forward(step)
         turtle.right(90)
 
 
-def draw_fractal_square():
-    global step
-    draw_square()
+def draw_fractal_square(step):
+    draw_square(step)
     step /= 2
     turtle.forward(step)
     turtle.right(45)
     step = math.sqrt(2 * (step ** 2))  # Pythagorean theorem
+    return step
 
 
 def main():
-    for _ in range(15):
-        draw_fractal_square()
+    the_step = 500
+    
+    while the_step > 1:
+        the_step = draw_fractal_square(the_step)
 
 
 if __name__ == '__main__':
