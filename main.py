@@ -1,10 +1,6 @@
 import turtle
 import math
-
-# Set up
-turtle.speed(100)
-turtle.color('red')
-turtle.hideturtle()
+from fractals.setup import setup
 
 # Going to the start point
 turtle.penup()
@@ -36,5 +32,6 @@ def main():
 
 
 if __name__ == '__main__':
+    setup(speed=100, start_position=(0, 0), hideturtle=True, color='red')
     main()
     turtle.done()
