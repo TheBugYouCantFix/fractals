@@ -6,7 +6,6 @@ from fractals.setup import setup
 
 def draw_triangle(step):
     for _ in range(3):
-        turtle.forward(1)
         turtle.forward(step)
         turtle.left(120)
 
