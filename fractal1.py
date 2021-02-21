@@ -2,7 +2,7 @@
 
 import turtle
 import math
-from fractals.setup import setup
+from setup import setup
 
 
 def draw_square(step):
