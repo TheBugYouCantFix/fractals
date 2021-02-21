@@ -1,6 +1,6 @@
 import turtle
 import math
-from fractals.setup import setup
+from setup import setup
 
 screen = turtle.Screen()
 screen.setup(1300, 800)
