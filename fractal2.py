@@ -1,7 +1,7 @@
 # Fractal triangle
 
 import turtle
-from fractals.setup import setup
+from setup import setup
 
 
 def draw_triangle(step):
