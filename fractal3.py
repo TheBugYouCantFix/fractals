@@ -39,26 +39,28 @@ def draw_circle(step):
 
 
 def main():
-    the_step = 250
-    for _ in range(10):
-        draw_square(the_step)
-        draw_triangle(the_step)
-        turtle.left(135)
-        turtle.forward(the_step)
-        turtle.left(90)
-        draw_triangle(the_step)
-        turtle.left(135)
-        turtle.forward(the_step)
-        turtle.left(90)
-        draw_circle(the_step)
+    
+    for _ in range(4):
+        the_step = 250
+        
+        for _ in range(10):
+            draw_square(the_step)
+            draw_triangle(the_step)
+            turtle.left(135)
+            turtle.forward(the_step)
+            turtle.left(90)
+            draw_triangle(the_step)
+            turtle.left(135)
+            turtle.forward(the_step)
+            turtle.left(90)
+            draw_circle(the_step)
 
-        the_step -= 25
-
+            the_step -= 25
+            
+        turtle.left(90)
+        
 
 if __name__ == '__main__':
     setup(speed=1000, start_position=(250, -300), hideturtle=True, color='red')
-    for _ in range(4):
-        main()
-        turtle.left(90)
-
+    main()     
     turtle.done()
